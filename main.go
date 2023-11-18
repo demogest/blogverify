@@ -154,7 +154,7 @@ func verifyHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	if r.Method != http.MethodPost {
+	if r.Method != http.MethodOptions && r.Method != http.MethodPost {
 		sendJSONResponse(w, Response{Message: "Method not allowed"}, http.StatusMethodNotAllowed)
 		return
 	}
