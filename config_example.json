@@ -1,0 +1,21 @@
+{
+    "RateLimit": {
+      "Enabled": true,
+      "RequestsPerSecond": 5
+    },
+    "Log":{
+      "LogFilePath": "access_test.log",
+      "MaxLogSizeMB": 5,
+      "MaxBackups": 3,
+      "MaxAge": 20,
+      "LogTimeFormat": "2006-01-02 15:04:05",
+      "TimeZone": "Asia/Shanghai"
+    },
+    "Cors": {
+      "Enabled": true,
+      "AllowedOrigins": ["https://www.firmant.me","https://firmant.me"]
+    },
+    "RedirectURL": "https://example.firmant.me",
+    "Password":"aaa"
+  }
+  
