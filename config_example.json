@@ -16,6 +16,7 @@
       "AllowedOrigins": ["https://www.firmant.me","https://firmant.me"]
     },
     "RedirectURL": "https://example.firmant.me",
-    "Password":"aaa"
+    "Password": "aaa",
+    "Port": "8080"
   }
   

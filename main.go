@@ -23,6 +23,7 @@ type Config struct {
 	Cors        CorsConfig      `json:"Cors"`
 	RedirectURL string          `json:"RedirectURL"`
 	Password    string          `json:"Password"`
+	Port        string          `json:"Port"`
 }
 
 // RateLimitConfig represents the configuration for rate limiting.
@@ -87,8 +88,8 @@ func main() {
 	http.HandleFunc("/", limitMiddleware(rootHandler))
 	http.HandleFunc("/verify", limitMiddleware(verifyHandler))
 
-	fmt.Println("Server is running on :8080")
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	fmt.Printf("Server is running on :%s\n", config.Port)
+	log.Fatal(http.ListenAndServe(":"+config.Port, nil))
 }
 
 func loadConfig(configPath string) (Config, error) {
